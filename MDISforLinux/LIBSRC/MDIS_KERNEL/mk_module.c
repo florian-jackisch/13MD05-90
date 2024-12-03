@@ -1602,7 +1602,7 @@ int init_module(void)
 		return -1;
 	}
 
-	if ((cl = class_create(THIS_MODULE, "chardrv")) == NULL)
+	if ((cl = class_create("chardrv")) == NULL)
 	{
 		unregister_chrdev_region(first, 1);
 		return -1;

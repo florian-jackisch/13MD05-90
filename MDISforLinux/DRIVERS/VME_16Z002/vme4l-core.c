@@ -3299,7 +3299,7 @@ static int __init vme4l_init_module(void)
 #endif
 	init_waitqueue_head( &G_dmaWq );
 
-	class_vme4l = class_create(THIS_MODULE, "vme4l");
+	class_vme4l = class_create("vme4l");
 	if (IS_ERR(class_vme4l))
 		goto CLEANUP;
 	
