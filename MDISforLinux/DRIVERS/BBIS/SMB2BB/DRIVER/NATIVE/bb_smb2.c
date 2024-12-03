@@ -227,7 +227,7 @@ static struct i2c_driver smb2_driver = {
  |  STATICS                                |
  +-----------------------------------------*/
 
-static DEFINE_SEMAPHORE(G_smb2Mutex);
+static DEFINE_SEMAPHORE(G_smb2Mutex, 1);
 
 static struct i2c_client *getClientFromAddrAndBusnr(int addr, int busnr);
 static int32 SMB2BB_QuickComm( void *smbHdl, u_int32 flags, u_int16 addr,

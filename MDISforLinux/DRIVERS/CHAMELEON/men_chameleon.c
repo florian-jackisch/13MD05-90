@@ -183,7 +183,7 @@ static const char *G_sysChamTblAttrname[NR_CHAM_TBL_ATTRS] = { "fpga_file","mode
 static const char *G_sysIpCoreAttrname[NR_CHAM_IPCORE_ATTRS] = { "Unit", "devId", "Grp", "Rev", "Var", "Inst", "IRQ", "BAR", "Offset", "Addr" };
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,36)
-static DEFINE_SEMAPHORE(cham_probe_sem);
+static DEFINE_SEMAPHORE(cham_probe_sem, 1);
 #else
 static DECLARE_MUTEX(cham_probe_sem);
 #endif

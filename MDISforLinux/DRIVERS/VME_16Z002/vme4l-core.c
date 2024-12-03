@@ -203,7 +203,7 @@ static spinlock_t			G_lockFlags;
 #endif
 
 /** mutex for DMA */
-static DEFINE_SEMAPHORE(G_dmaMutex);
+static DEFINE_SEMAPHORE(G_dmaMutex, 1);
 
 #ifdef CONFIG_PROC_FS
 static struct proc_dir_entry *vme4l_root;
